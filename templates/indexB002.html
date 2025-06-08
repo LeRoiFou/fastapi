@@ -3,23 +3,34 @@
 
 <head>
     <meta charset="UTF-8">
+
+    <!-- Titre de l'onglet -->
     <title>2ème essai</title>
+
+    <!-- Lien au fichier .CSS -->
+    <link rel="stylesheet" href="/static/indexB002_style.css">
+
+    <!-- Font family : https://fonts.google.com -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
     <!-- Titre et texte -->
-    <h1>Texte à afficher</h1>
-    <p>Chemin d'accès de l'URL : {{ request.url }}</p>
+    <h1 class="title">Texte à afficher</h1>
+    <p class="text">Chemin d'accès de l'URL : <span class="info">{{ request.url }}</span></p>
 
     <!-- récupération de la méthode post_hello -->
     <form method="post">
         <!-- Bouton -->
-        <button type="submit">Cliquer ici</button>
+        <button type="submit" class="button">Cliquer ici</button>
     </form>
 
-    <!-- Si le message est à afficher... -->
+    <!-- Message à afficher... -->
     {% if message%}
-    <p>{{ message }}</p>
+    <p class="text">{{ message }}</p>
     {% endif %}
 </body>
 
