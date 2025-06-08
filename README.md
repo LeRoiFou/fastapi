@@ -22,6 +22,7 @@ Editeur : Laurent REYNAUD <br>
 
 - indexB001_essai : afficher "Hello World!" avec une combinaison la librairie python fastapi et un fichier HTML
 - indexB002_essai : afficher "Hello World!" après avoir appuyé sur un bouton
+- indexB003_essai : zone de saisie avec un bouton affichant le texte saisi dès validation
 
 ---
 

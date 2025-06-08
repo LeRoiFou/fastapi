@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Essai avec la librairie fastapi</title>
+</head>
+
+<body>
+
+    <!-- Titre et texte -->
+    <h1>Essai avec fastapi</h1>
+    <p>Chemin d'accès de l'URL : {{ request.url }}</p>
+
+    <!-- Récupération de la méthode post_hello() -->
+    <form method="post">
+        <!-- Zone de saisie -->
+        <input type="text" name="message" value="Votre nom" required>
+        <br>
+        <br>
+        <!-- Bouton -->
+        <button type="submit">Valider</button>
+    </form>
+
+    <!-- Si le message est à afficher... -->
+    {% if message%}
+    <p>{{ message }}</p>
+    {% endif %}
+
+</body>
+
+</html>
