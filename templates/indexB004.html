@@ -10,12 +10,7 @@
 
     <!-- Titre principal et texte -->
     <h1>Titre principal</h1>
-    <p>URL de cette page : {{ request.url}}</p>
-
-    <!-- Message d'erreur si saisi entre que des nombre entiers -->
-    {% if message_erreur %}
-    <p style="color:red;">{{ message_erreur }}</p>
-    {% endif %}
+    <p>URL de cette page : {{request.url}}</p>
 
     <!-- Récupération de la méthode post_hello() -->
     <form method="post">
@@ -29,10 +24,15 @@
 
     </form>
 
-    <!-- Si le message est à afficher -->
+    <!-- Message est à afficher -->
     {%if message%}
     <p>{{message}}</p>
     {%endif%}
+
+    <!-- Message d'erreur si saisi entre que des nombre entiers -->
+    {% if error_message %}
+    <p style="color:red;">{{error_message}}</p>
+    {% endif %}
 
 </body>
 

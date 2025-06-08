@@ -21,7 +21,7 @@ async def validation_exception_handler(request: Request, exc: RequestValidationE
             "indexB004.html",  # template HTML
             {
                 "request": request,
-                "message_erreur": "Veuillez entrer un nombre entier valide !",
+                "error_message": "Veuillez entrer un nombre entier valide !",
             },
             status_code=HTTP_422_UNPROCESSABLE_ENTITY,
         )
