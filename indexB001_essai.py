@@ -1,6 +1,7 @@
 from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
+from fastapi.staticfiles import StaticFiles
 import uvicorn
 
 # Instanciation de la sous-librairie FastAPI
@@ -8,6 +9,9 @@ app = FastAPI()
 
 # Indique à FastAPI d’aller chercher les fichiers .HTML au dossier templates
 templates = Jinja2Templates(directory="templates")
+
+# Permet d'accéder aux fichiers du dossier static/ via l'URL /static/
+app.mount('/static/', StaticFiles(directory='static'), name='static')
 
 @app.get(
     '/hello', # URL avec un chemin specifié

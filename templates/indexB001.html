@@ -7,12 +7,29 @@
 
 <head>
     <meta charset="UTF-8">
+
+    <!-- Titre de l'onglet -->
     <title>1er essai</title>
+
+    <!-- Lien au fichier .CSS -->
+    <link rel="stylesheet" href="/static/indexB001_style.css">
+
+    <!-- Font family : https://fonts.google.com/ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+
 </head>
 
 <body>
-    <h1>Hello World!</h1>
-    <p>Tu es sur le serveur local 👉 {{ request.url }}</p>
+
+    <!-- Titre principal -->
+    <h1 class="title">Hello World!</h1>
+
+    <!-- Texte -->
+    <p class="my-text">Tu es sur le serveur local 👉 <span class="my-url">{{ request.url }}</span></p>
 </body>
 
 </html>

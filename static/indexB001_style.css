@@ -1,0 +1,46 @@
+
+/* Style des bordures : 
+https://www.pierre-giraud.com/wp-content/uploads/2019/05/border-styles.png */
+
+/* Corps de la page */
+body{
+    background-color: teal; /*couleur de fond*/
+    font-family: "Ubuntu", sans-serif; /*font-family : https://fonts.google.com/*/
+    font-weight: 300; /*font-family : https://fonts.google.com/*/
+    font-style: normal; /*font-family* : https://fonts.google.com/*/
+    text-align: center; /*alignement du texte*/
+}
+
+/* Sélecteur simple pour les attributs H1*/
+h1{
+    color: white; /*couleur du texte*/
+}
+
+/* Attributs de type class */
+.title{
+    text-decoration: underline; /*texte souligné*/
+    text-transform: uppercase;  /*texte en majuscule*/
+    /*ombre : projection horizontale / verticale / rayon propagation / couleur*/
+    text-shadow: -3px 3px 4px black;
+    position: fixed; /*lorsqu'on descend la page, le titre reste figé*/
+}
+.my-text{
+    font-style: italic; /*texte en italique*/
+    letter-spacing: 2px; /*écart entre les lettres*/
+    word-spacing: 10px; /*écart entre les mots*/
+    margin: 50px 0px; /*espacement extérieur : haut/bas et gauche/droite*/
+}
+
+/* span : élément de type block avec un attribut de type class*/
+.my-url{
+    /*bordures : épaisseur, type, couleur*/
+    border-top: 4px dashed rgb(0, 255, 102); 
+    border-bottom: 4px dashed rgb(0, 255, 102); 
+    border-left: 2px solid rgb(0, 255, 102);
+    border-right: 2px solid rgb(0, 255, 102);
+    border-radius: 10px; /*bordure : arrondi des coins*/
+    padding: 5px; /*espacement à l'intérieur de la bordure*/
+    /*ombre : projection horizontale / verticale / rayon propagation / couleur*/
+    box-shadow: 3px 3px 4px rgb(164, 184, 9); 
+    font-weight: bold; /*texte en gras*/
+}
