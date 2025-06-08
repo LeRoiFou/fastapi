@@ -17,7 +17,7 @@ templates = Jinja2Templates(directory='templates')
          
          param request: données à restituer
          """,)
-def get_hello(request: Request):
+async def get_hello(request: Request):
     return templates.TemplateResponse(
         'indexB003.html', # récupération des données du fichier HTML
         {'request': request, 'message': '❓'}) # Données à restituer
@@ -29,10 +29,9 @@ def get_hello(request: Request):
          Retour des données au format HML
          
          param request: données à restituer
-         args user_text: zone de saisie pour l'utilisateur
+         args message: zone de saisie pour l'utilisateur
          """,)
-def post_hello(request: Request, message: str = Form(...)):
-
+async def post_hello(request: Request, message: str = Form(...)) -> str:
     return templates.TemplateResponse(
         'indexB003.html', # récupération des données du fichier HTML
         {'request': request, 'message': f'Hello {message}'}) # Données à restituer
