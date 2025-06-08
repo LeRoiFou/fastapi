@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>2ème essai</title>
+</head>
+
+<body>
+    <!-- Titre et texte -->
+    <h1>Texte à afficher</h1>
+    <p>Chemin d'accès de l'URL : {{ request.url }}</p>
+
+    <!-- récupération de la méthode post_hello -->
+    <form method="post">
+        <!-- Bouton -->
+        <button type="submit">Cliquer ici</button>
+    </form>
+
+    <!-- Si le message est à afficher... -->
+    {% if message%}
+    <p>{{ message }}</p>
+    {% endif %}
+</body>
+
+</html>

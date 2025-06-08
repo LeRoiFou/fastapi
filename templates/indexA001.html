@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Appli FastAPI CSS</title>
+    <link rel="stylesheet" href="/static/indexA001_style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Calculer la TVA à l'intérieur du montant (Taux TVA à 20 %)</h2>
+        <form method="post">
+            <label for="valeur">Entrez un montant TTC :</label>
+            <input type="number" name="valeur" id="valeur" required>
+            <button type="submit">Calculer</button>
+        </form>
+
+        <div class="result">
+            {{ result }}
+        </div>
+
+    </div>
+</body>
+
+</html>
