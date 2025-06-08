@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Test sur fastapi</title>
+</head>
+
+<body>
+
+    <!-- Titre principal et texte -->
+    <h1>Titre principal</h1>
+    <p>URL de cette page : {{ request.url}}</p>
+
+    <!-- Message d'erreur si saisi entre que des nombre entiers -->
+    {% if message_erreur %}
+    <p style="color:red;">{{ message_erreur }}</p>
+    {% endif %}
+
+    <!-- Récupération de la méthode post_hello() -->
+    <form method="post">
+
+        <!-- Zone de saisie -->
+        <input type="text" name="message" required>
+        <br><br>
+
+        <!-- Bouton -->
+        <button type="submit">Valider</button>
+
+    </form>
+
+    <!-- Si le message est à afficher -->
+    {%if message%}
+    <p>{{message}}</p>
+    {%endif%}
+
+</body>
+
+</html>
