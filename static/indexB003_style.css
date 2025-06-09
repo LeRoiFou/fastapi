@@ -1,0 +1,46 @@
+/* Style des bordures : 
+https://www.pierre-giraud.com/wp-content/uploads/2019/05/border-styles.png */
+
+body{
+    background-color: teal; /*couleur de fond*/
+    text-align: center; /*texte centré*/
+    font-family: "Fascinate Inline", system-ui; /*google font*/
+    font-weight: 400; /*google font*/
+    font-style: normal; /*google font*/
+}
+
+.title{
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+.text{
+    margin: 50px 0px;
+}
+
+.url{
+    border: 5px outset yellowgreen;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+
+.entry{
+    text-align: center;
+    background-color: rgb(226, 86, 10);
+    padding: 10px 100px;
+    border-radius: 20px;
+    border: 2px solid black;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.button{
+    background-color: chartreuse;
+    font-family: "Henny Penny", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    border: 2px dotted black;
+    border-radius: 20px;
+    box-shadow: 3px 3px 5px black;
+    padding: 5px 100px;
+    margin: 50px;
+}

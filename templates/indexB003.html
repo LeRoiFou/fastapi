@@ -3,28 +3,38 @@
 
 <head>
     <meta charset="UTF-8">
+
+    <!-- Titre de l'onglet -->
     <title>Essai avec la librairie fastapi</title>
+
+    <!-- Lien au fichier CSS -->
+    <link rel="stylesheet" href="/static/indexB003_style.css">
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fascinate+Inline&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
     <!-- Titre et texte -->
-    <h1>Essai avec fastapi</h1>
-    <p>Chemin d'accès de l'URL : {{ request.url }}</p>
+    <h1 class='title'>Essai avec fastapi</h1>
+    <p class="text">Chemin d'accès de l'URL : <span class="url">{{ request.url }}</span></p>
 
     <!-- Récupération de la méthode post_hello() -->
     <form method="post">
         <!-- Zone de saisie -->
-        <input type="text" name="message" value="Votre nom" required>
+        <input class='entry' type="text" name="message" value="Votre nom" required>
         <br>
         <br>
         <!-- Bouton -->
-        <button type="submit">Valider</button>
+        <button class='button' type="submit">Valider</button>
     </form>
 
-    <!-- Si le message est à afficher... -->
+    <!-- Message est à afficher... -->
     {% if message%}
-    <p>{{ message }}</p>
+    <p class='text'>{{ message }}</p>
     {% endif %}
 
 </body>
