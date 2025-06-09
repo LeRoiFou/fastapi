@@ -3,36 +3,48 @@
 
 <head>
     <meta charset="UTF-8">
+
+    <!-- Titre de l'onglet -->
     <title>Test sur fastapi</title>
+
+    <!-- Lien pour accéder au fichier CSS -->
+    <link rel="stylesheet" href="/static/indexB004_style2.css">
+
+    <!-- Google font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
 
     <!-- Titre principal et texte -->
-    <h1>Titre principal</h1>
-    <p>URL de cette page : {{request.url}}</p>
+    <h1 class='title'>Titre principal</h1>
+    <p class="text">URL de cette page : {{request.url}}</p>
 
     <!-- Récupération de la méthode post_hello() -->
     <form method="post">
 
         <!-- Zone de saisie -->
-        <input type="text" name="message" required>
+        <input class="entry" type="text" name="message" required>
         <br><br>
 
         <!-- Bouton -->
-        <button type="submit">Valider</button>
+        <button class='button' type="submit">Valider</button>
 
     </form>
 
-    <!-- Message est à afficher -->
-    {%if message%}
-    <p>{{message}}</p>
-    {%endif%}
-
-    <!-- Message d'erreur si saisi entre que des nombre entiers -->
-    {% if error_message %}
-    <p style="color:red;">{{error_message}}</p>
+    <!-- Message à afficher -->
+    {% if message%}
+    <p class='text'>{{ message }}</p>
     {% endif %}
+
+    <!-- En cas d'erreur de saisi de message... -->
+    {% if error_message %}
+    <p class='text' style="color: yellow;">{{ error_message }}</p>
+    {% endif %}
+
 
 </body>
 
