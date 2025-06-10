@@ -1,0 +1,43 @@
+body{
+    font-family: "Ribeye", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    background-color: teal;
+}
+
+h1{
+    margin: 30px 0px;
+}
+
+p{
+    margin: 20px 0px;
+}
+
+input{
+    margin: 5px 0px;
+    padding: 5px 0px;
+    text-align: center;
+    border-radius: 20px;
+    font-family: "Ribeye", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+button{
+    margin: 40px 0px;
+    padding: 5px 70px;
+    border-radius: 20px;
+    border: 1px solid black;
+    box-shadow: 3px 3px 3px black;
+    background-color: #5fa64b;
+    font-weight: bold;
+}
+
+.message{
+    color: white;
+}
+
+.message_error{
+    color: #ffa600;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Titre de l'onglet -->
+    <title>Essai n° 5 sur fastapi</title>
+
+    <!-- Lien avec le fichier CSS -->
+    <link rel="stylesheet" href="static/indexB005_style2.css">
+
+    <!-- Google font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ribeye&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Titre principal -->
+    <h1>Calcul de l'IMC (Indice Masse Corporelle)</h1>
+
+    <!-- Récupération de la méthode post_hello() -->
+    <form method="post">
+
+        <!-- Texte rattaché à la 1ère zone de saisie : poids-->
+        <p>Poids (en kg)</p>
+
+        <!-- Zone de saisie : poids-->
+        <input type="text" name="weight" required>
+
+        <br>
+
+        <!-- Texte rattaché à la 2ème zone de saisie : taille-->
+        <p>Taille (en cm)</p>
+
+        <!-- Zone de saisie : taille-->
+        <input type="text" name="size" required>
+
+        <br>
+
+        <!-- Bouton de validation -->
+        <button type="submit">Valider</button>
+
+    </form>
+
+    <!-- Message à afficher -->
+    {% if message %}
+    <p class="message">{{ message }}</p>
+    {% endif %}
+
+    <!-- En cas d'erreur de saisie du message -->
+    {% if message_error %}
+    <p class="message_error">{{ message_error }}</p>
+    {% endif %}
+
+</body>
+
+</html>
