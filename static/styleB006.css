@@ -1,0 +1,7 @@
+body{
+    font-family: "Ubuntu", sans-serif; /*font-family : https://fonts.google.com/*/
+    font-weight: 300; /*font-family : https://fonts.google.com/*/
+    font-style: normal; /*font-family* : https://fonts.google.com/*/
+    text-align: center; /*alignement du texte*/
+    background-color: teal; /*couleur de fond*/
+}
