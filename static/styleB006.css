@@ -1,7 +1,51 @@
 body{
-    font-family: "Ubuntu", sans-serif; /*font-family : https://fonts.google.com/*/
-    font-weight: 300; /*font-family : https://fonts.google.com/*/
-    font-style: normal; /*font-family* : https://fonts.google.com/*/
-    text-align: center; /*alignement du texte*/
-    background-color: teal; /*couleur de fond*/
+    text-align: center;
+    background-color: teal;
+    font-family: "Henny Penny", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h2{
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 30px 0px;
+}
+
+.input-button{
+    size: 200px;
+}
+
+input[type="file"]::file-selector-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Survol du bouton de chargement du fichier */
+input[type="file"]::file-selector-button:hover {
+  background-color: #45a049;
+}
+
+input[type='number']{
+    text-align: center;
+    border-radius: 20px;
+    padding: 5px 0px;
+}
+
+select[name='cr3']{
+    width: 150px;
+    text-align: center;
+    border-radius: 20px;
+    padding: 5px 0px;
+}
+
+button{
+    background-color: #4CAF50;
+    border-radius: 20px;
+    padding: 10px 10px;
+    border: 1px dashed black;
 }

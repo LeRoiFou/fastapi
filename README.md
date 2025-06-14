@@ -24,7 +24,8 @@ Editeur : Laurent REYNAUD <br>
 - indexB002_essai : afficher "Hello World!" après avoir appuyé sur un bouton
 - indexB003_essai : zone de saisie avec un bouton affichant le texte saisi dès validation
 - indexB004_essai : message d'erreur en cas de saisi autre que des nombres entiers
-- indexB005_essai : calcul de l'IMC
+- indexB005_essai : calcul de l'IMC (application partagée via le dossier fastapi_cloud1)
+- indexB006_essai : chargement d'un fichier Excel avec export des traitements opérés sous format Excel
 
 ---
 

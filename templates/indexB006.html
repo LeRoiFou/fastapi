@@ -1,0 +1,53 @@
+<!-- Page URL de saisie des données par l'utilisateur -->
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Titre de l'onglet -->
+    <title>Upload et Traitement Excel</title>
+
+    <!-- Lien pour le fichier CSS -->
+    <link rel="stylesheet" href="/static/styleB006.css">
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Titre de la page @ -->
+    <h2>Traitement de Fichier Excel</h2>
+
+    <!-- Route /process -->
+    <form action="/process" method="post" enctype="multipart/form-data">
+
+        <!-- Bouton de chargement du fichier Exccel -->
+        <label for="fichier">Fichier Excel :</label>
+        <input type="file" name="import_file" required><br><br>
+
+        <!-- Zone de texte pour le bas de fourchette des salaires -->
+        <label for="cr1">Salaire min :</label>
+        <input type="number" name="cr1" required><br><br>
+
+        <!-- Zone de texte pour le haut de fourchette des salaires -->
+        <label for="cr2">Salaire max :</label>
+        <input type="number" name="cr2" required><br><br>
+
+        <!-- Menu déroulant pour la civilité (Monsieur / Madame) -->
+        <label for="cr3">Civilité à exclure :</label>
+        <select name="cr3">
+            <option value="Monsieur">Monsieur</option>
+            <option value="Madame">Madame</option>
+        </select><br><br>
+
+        <!-- Bouton pour traiter le fichier Excel chargé -->
+        <button type="submit">Traiter et Télécharger</button>
+    </form>
+</body>
+
+</html>
