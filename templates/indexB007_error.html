@@ -1,0 +1,31 @@
+<!-- Page URL des erreurs du fichier chargé -->
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Titre de l'onglet -->
+    <title>Erreur</title>
+
+    <!-- Lien pour le fichier CSS -->
+    <link rel="stylesheet" href="/static/styleB007.css">
+
+</head>
+
+<body>
+
+    <!-- Titre principal de la page @ -->
+    <h2 style="color: red;">Erreur</h2>
+
+    <!-- Message d'erreur -->
+    <p>{{ message }}</p>
+
+    <!-- Bouton de retour vers le formulaire (route /)-->
+    <form action="/" method="get">
+        <button type="submit">🔄 Revenir au formulaire</button>
+    </form>
+</body>
+
+</html>

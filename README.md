@@ -26,6 +26,7 @@ Editeur : Laurent REYNAUD <br>
 - indexB004_essai : message d'erreur en cas de saisi autre que des nombres entiers
 - indexB005_essai : calcul de l'IMC (application partagée via le dossier fastapi_cloud1)
 - indexB006_essai : chargement d'un fichier Excel avec export des traitements opérés sous format Excel
+- indexB007_essai : chargement d'un fichier Excel avec récupération de valeurs uniques dans le champ 'civilité' -> sélection du titre affecté à chaque 'civilité' puis affichage des titres affectés à chacune des civilités
 
 ---
 

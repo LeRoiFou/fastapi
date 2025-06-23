@@ -1,0 +1,32 @@
+<!-- Cheminement des fichiers HTML : upload, formulaire et resultats -->
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Titre de l'onglet -->
+    <title>Résultat</title>
+
+    <!-- Lien avec le fichier CSS -->
+    <link rel="stylesheet" href="/static/styleB007.css">
+</head>
+
+<body>
+
+    <!-- Titre principal de la page @ -->
+    <h2>Résultat des affectations</h2>
+
+    <!-- Liste des éléments : titres affectés aux civilités -->
+    <ul style="text-align: left;">
+        {% for civ, titre in results.items() %}
+        <li>{{ civ }} → {{ titre }}</li>
+        {% endfor %}
+    </ul>
+
+    <!-- Lien pour revenir à la page par défaut -->
+    <a href="/">Revenir au début</a>
+</body>
+
+</html>

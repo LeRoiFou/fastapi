@@ -1,0 +1,31 @@
+<!-- Cheminement des fichiers HTML : upload, formulaire et resultats -->
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Titre de l'onglet -->
+    <title>Charger un fichier Excel</title>
+
+    <!-- Lien avec le fichier CSS -->
+    <link rel="stylesheet" href="/static/styleB007.css">
+</head>
+
+<body>
+    <!-- Titre principal de la page @ -->
+    <h2>Charger un fichier Excel contenant une colonne 'civilité'</h2>
+
+    <!-- Route POST méthode upload_excel() -->
+    <form action="/upload" method="post" enctype="multipart/form-data">
+
+        <!-- Bouton de récupération du fichier Excel -->
+        <input type="file" name="import_file" accept=".xlsx" required>
+
+        <!-- Bouton de chargement du fichier récupéré -->
+        <button type="submit">Charger</button>
+    </form>
+</body>
+
+</html>
