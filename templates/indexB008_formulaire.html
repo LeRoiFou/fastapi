@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Titre de l'onglet principal -->
+    <title>Affectation des titres</title>
+
+    <!-- Lien avec le fichier CSS -->
+    <link rel="stylesheet" href="static/styleB008.css">
+</head>
+
+<body>
+
+    <!-- Titre principal de la page @ -->
+    <h2>Affecter un titre à chaque civilité</h2>
+
+    <!-- Route POST méthode post_submit() -->
+    <form action="/submit" method="post">
+
+        <!--  Champ caché dans <form> -->
+        <input type="hidden" name="session_file" value="{{ session_file }}">
+
+        <!-- Table -->
+        <table class="ma-table">
+            <tr>
+                <th>Civilité</th>
+                <th>Titre</th>
+            </tr>
+            {% for civ in civilites %}
+            <tr>
+                <td>{{ civ }}</td>
+                <td>
+                    <select name="{{ civ }}">
+                        {% for titre in titres %}
+                        <option value="{{ titre }}">{{ titre }}</option>
+                        {% endfor %}
+                    </select>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+        <br>
+
+        <!-- Bouton pour valider les titres affectés aux civilités -->
+        <button type="submit">Valider les titres</button>
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Titre de l'onglet -->
+    <title>Résultats</title>
+
+    <!-- Lien avec le fichier CSS -->
+    <link rel="stylesheet" href="static/styleB008.css">
+</head>
+
+<body>
+
+    <!-- Titre principal de page @ -->
+    <h2>Résultats des affectations</h2>
+
+    <!-- Liste des éléments : titres affectés aux civilités -->
+    <ul style="text-align: left;">
+        {% for civ, titre in results.items() %}
+        <li>{{ civ }} -> {{ titre }}</li>
+        {% endfor %}
+    </ul>
+
+    <!-- Récupérationd du fichier pickle généré -->
+    {% if download_link %}
+    <a href="{{ download_link }}">📥 Télécharger le fichier pickle</a>
+    {% endif %}
+
+    <!-- Lien pour revenir à la page par défaut -->
+    <a href="/">🔄 Revenir au formulaire</a>
+</body>
+
+</html>
