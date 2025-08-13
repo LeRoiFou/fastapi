@@ -10,7 +10,7 @@ app = FastAPI()
 # Indique à FastAPI d’aller chercher les fichiers .HTML au dossier templates
 templates = Jinja2Templates(directory="templates")
 
-# Permet d'accéder aux fichiers du dossier static/ via l'URL /static/
+# Permet d'accéder aux fichiers CSS du dossier static/ via l'URL /static/
 app.mount('/static/', StaticFiles(directory='static'), name='static')
 
 @app.get(
@@ -20,7 +20,8 @@ app.mount('/static/', StaticFiles(directory='static'), name='static')
     description="""
     Retour des données au format HTML
     
-    Param request : à inclure si on a recours au HTML même si aucune requête n'est effectuée
+    Param request : à inclure si on a recours au HTML même si aucune requête 
+    n'est effectuée
     """,
     )
 async def hello_world(request:Request):
