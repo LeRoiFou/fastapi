@@ -1,4 +1,4 @@
-from fastapi import FastAPI, Request, Form, UploadFile, File
+from fastapi import FastAPI, Request, UploadFile, File, Form
 from fastapi.responses import FileResponse, HTMLResponse
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
@@ -30,7 +30,7 @@ OUTPUT_PATH = "output/resultat.xlsx"
          param request: requêtes à effectuer directement sur le fichier HTML
          """
          )
-def form_page(request: Request):
+def form_page(request: Request) -> None:
     return templates.TemplateResponse(
         "indexB006.html", # Affichage de la page HTML
         {"request": request} # Requêtes à effectuer sur le fichier HTML
@@ -71,7 +71,7 @@ async def process_file(
     # Instruction asynchrone ci-après permettant de lire le fichier Excel en mémoire
     # (en mode binaire) sans bloquer l'application (instruction await)
     contents = await import_file.read()
-
+    
     # Assignation d'un nom de fichier temporaire Excel
     input_path = "temp_upload.xlsx"
     
