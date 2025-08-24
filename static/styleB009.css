@@ -1,0 +1,36 @@
+body {
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 30px;
+  margin: 20px;
+  font-size: 18px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.btn:hover {
+  background-color: #45a049;
+}
+
+.body_default {
+  background-color: teal;
+}
+
+.body_page1 {
+  background-color: green;
+}
+
+.body_page2 {
+  background-color: chocolate;
+}
+
+.body_page3 {
+  background-color: indigo;
+}
