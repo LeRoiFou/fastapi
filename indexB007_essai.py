@@ -1,7 +1,6 @@
 from fastapi import FastAPI, Request, UploadFile, File
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
-from fastapi.responses import HTMLResponse
 import uvicorn
 import os
 from treatments.indexB007_treatments import treatments
@@ -16,7 +15,6 @@ templates = Jinja2Templates(directory='templates')
 app.mount('/static/', StaticFiles(directory='static'), name='static')
 
 @app.get('/', # URL page par défaut
-         response_class = HTMLResponse, # affichage en page HTML
          summary = 'Page par défaut',
          description="""
          Retour de la page par défaut
@@ -24,14 +22,13 @@ app.mount('/static/', StaticFiles(directory='static'), name='static')
          param request: requête à saisir directement sur le fichier HTML
          """,
          )
-async def get_home(request: Request):
+def get_home(request: Request):
     return templates.TemplateResponse(
         'indexB007_upload.html', # Fichier HTML pour la page @ par défaut
         {'request': request} # requêtes à saisir directement sur le fichier HTML
     )
 
-@app.post("/upload", # URL pour affecter un titre à chaque civilité
-          response_class=HTMLResponse, # affichage en HTML
+@app.post("/process", # URL pour affecter un titre à chaque civilité
           summary="Chargement du fichier Excel : titres à affecter",
           description="""
           Retour en table les données du fichier Excel chargé avec les titres à rattacher
@@ -103,7 +100,6 @@ async def upload_excel(
         )
         
 @app.post("/submit", # URL résultat des affectations
-          response_class=HTMLResponse, # affichage en HTML
           summary="Titres rattachés aux civilités",
           description="""
           Retour des titres rattachés aux civilités
