@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test n° 2</title>
+    <link rel="stylesheet" href="/static/styleD003.css">
+</head>
+
+<body>
+    <h1>Test projet n° 2</h1>
+
+    <form action="/" method="post">
+
+        <!-- Données récupérées de la méthode get_home() du fichier python -->
+        <table>
+            <thead>
+                <tr>
+                    {% for k, v in fruits.items()%}
+                    <th>{{k}}</th>
+                    {%endfor%}
+                </tr>
+            </thead>
+            <tbody>
+                {% set n = fruits['Fruits']|length %}
+                {% for i in range(n) %}
+                <tr>
+                    {%for k in fruits.keys()%}
+                    <td>{{ fruits[k][i] }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table><br>
+
+        <label for="data">Veuiller saisir votre fruit : </label>
+        <select name="fruits" id="fruits">
+            {%for f in fruits['Fruits']%}
+            <option value="{{ f }}">{{ f }}</option>
+            {%endfor%}
+        </select><br>
+
+        <label for="quantity">Quantité achetée</label>
+        <input type="number" name="quantity" id="quantity" min="0" max="1000" required>
+        <br>
+
+        <button type="submit">Valider</button><br>
+    </form><br>
+
+    <table>
+        <thead>
+            <tr>
+                <th colspan="2">Données restituées</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td>Prix total (en €)</td>
+                <td>{{result}}</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td>Fruit sélectionné</td>
+                <td>{{fruit_selected}}</td>
+            </tr>
+            <tr>
+                <td>Quantité achetée</td>
+                <td>{{quantity_selected}}</td>
+            </tr>
+            <tr>
+                <td>Prix unitaire (en €)</td>
+                <td>{{price}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>

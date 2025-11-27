@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="stylesheet" href="/static/style_test.css">
+</head>
+
+<body>
+    <h1>Chapitre I : Les entrées</h1>
+
+    {%if message%}
+    <p>{{message}}</p>
+    {%endif%}
+
+    <table>
+
+        <thead>
+            <tr>
+                {% for k, v in dict.items()%}
+                <th>{{k}}</th>
+                {%endfor%}
+            </tr>
+        </thead>
+
+        <tbody>
+            {% set n = dict['Nom']|length %}
+            {% for i in range(n) %}
+            <tr>
+                {% for k in dict.keys() %}
+                <td>{{ dict[k][i] }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>IDL méthode tarifaire</title>
+    <link rel="stylesheet" href="/static/styleC001.css">
+</head>
+
+<body>
+    <header>
+
+        <h1>Impôts Directs Locaux - Méthode Tarifaire</h1>
+
+    </header>
+
+    <div id="conteneur">
+
+        <div id="col1">
+
+            <form action="/area" id="area" method="post">
+
+                <p class="title">Superficie réelle (en m²)</p>
+
+                <label for="P1">P1</label>
+                <input type="number" name="P1" value="{{areaP1 | default(0)}}">
+                <br>
+
+                <label for="P2">P2</label>
+                <input type='number' name="P2" value="{{areaP2 | default(0)}}">
+                <br>
+
+                <label for="P3">P3</label>
+                <input type='number' name="P3" value="{{areaP3 | default(0)}}">
+                <br>
+
+                <label for="PK1">PK1</label>
+                <input type='number' name="PK1" value="{{areaPK1 | default(0)}}">
+                <br>
+
+                <label for="PK2">PK2</label>
+                <input type='number' name="PK2" value="{{areaPK2 | default(0)}}">
+                <br>
+
+                <label for="Total">Total</label>
+                <input type="number" name="area_sum" value="{{area_sum | default(0)}}" class="input-weighted-total"
+                    disabled>
+                <br><br>
+
+                <div>
+                    <button type="submit" class="button-area">Valider les superficies saisies</button>
+                </div>
+
+            </form>
+
+        </div>
+
+        <div id="col2">
+
+            <p class="title">Superficie pondérée (en m²)</p>
+
+            <label for="P1">P1 (coeff 1.00)</label>
+            <input type="number" name="p1" value="{{p1 | default(0) | int}}" class="input-weighted" disabled>
+            <br>
+
+            <label for="P2">P2 (coeff 0.50)</label>
+            <input type="number" name="p2" value="{{p2 | default(0) | int}}" class='input-weighted' disabled>
+            <br>
+
+            <label for="P3">P3 (coeff 0.20)</label>
+            <input type="number" name="p3" value="{{p3 | default(0) | int}}" class='input-weighted' disabled>
+            <br>
+
+            <label for="PK1">PK1 (coeff 0.50)</label>
+            <input type="number" name="pk1" value="{{pk1 | default(0) | int}}" class='input-weighted' disabled>
+            <br>
+
+            <label for="PK2">PK2 (coeff 0.20)</label>
+            <input type="number" name="pk2" value="{{pk2 | default(0) | int}}" class='input-weighted' disabled>
+            <br>
+
+            <label for="label_total_pondere">Total</label>
+            <input for="input_total_pondere" type="number" name="area_weighted_sum"
+                value="{{area_weighted_sum | default(0) | int}}" class='input-weighted' disabled>
+            <br><br>
+
+        </div>
+
+        <div id="col3">
+
+            <p style="margin-top: 50px;"></p>
+
+            <label for="annee">Année</label>
+            <select name="annee">
+                {%for year in year_list%}
+                <option value="{{year}}">{{year}}</option>
+                {%endfor%}
+            </select>
+            <br>
+
+            <label for="categorie">Catégorie</label>
+            <select name="categorie">
+                {%for category in category_list%}
+                <option value="{{category}}">{{category}}</option>
+                {%endfor%}
+            </select>
+            <br>
+
+            <label for="department">Département</label>
+
+            <select name="department" id="department">
+                {% for dept in department_list%}
+                <option value="{{dept}}">{{dept}}</option>
+                {%endfor%}
+            </select>
+            <br>
+
+            <label for="commune">Commune</label>
+            <select name="commune" id="city">
+                {%for city in city_list%}
+                <option value="{{city}}">{{city}}</option>
+                {%endfor%}
+            </select>
+            <br>
+
+            <label for="prefixe">Préfixe</label>
+            <select name="prefixe">
+                <option value="">''</option>
+            </select>
+            <br>
+
+            <label for="section">Section</label>
+            <select name="section">
+                <option value="">''</option>
+            </select>
+            <br>
+
+            <label for="parcelle">Parcelle</label>
+            <select name="parcelle">
+                <option value="">''</option>
+            </select>
+            <br>
+
+        </div>
+
+    </div>
+
+    <footer>
+
+        <div>
+            <button type="submit" id="col1" class="button-area">Base CFE</button>
+            <button type="submit" id="col2" class="button-area">Base TF</button>
+        </div>
+
+        <div>
+            <button type="submit" class="button-reset"><a href="/"
+                    style="color: black; text-decoration: none;">Réinitialiser</a></button>
+        </div>
+
+    </footer>
+
+    <script src="/static/scriptC001.js"></script>
+
+</body>
+
+</html>

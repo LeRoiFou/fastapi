@@ -1,0 +1,25 @@
+p {
+  font-style: italic;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th {
+  background-color: white;
+}
+
+th,
+td {
+  border: 2px solid black;
+  width: 100px;
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: teal;
+}
+tr:nth-child(odd) {
+  background-color: #aaa;
+}

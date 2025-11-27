@@ -1,0 +1,119 @@
+body {
+  text-align: center;
+  background-color: teal;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+select {
+  margin-left: 50px;
+  margin-bottom: 20px;
+  width: 400px;
+  height: 20px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+input[type="number"] {
+  text-align: center;
+  height: 20px;
+  width: 200px;
+  border-radius: 10px;
+  margin: 10px 0px;
+}
+
+label[for="P1"],
+label[for="P2"],
+label[for="P3"],
+label[for="annee"],
+label[for="prefixe"],
+label[for="section"],
+label[for="parcelle"] {
+  padding: 20px;
+}
+
+label[for="PK1"],
+label[for="PK2"] {
+  padding: 14px;
+}
+
+label[for="Total"] {
+  padding: 11px;
+  font-weight: bold;
+}
+
+label[for="categorie"],
+label[for="commune"] {
+  padding: 10px;
+}
+
+label[for="departement"] {
+  padding: 1px;
+}
+
+label[for="label_total_pondere"] {
+  padding: 0px 51px;
+  font-weight: bold;
+}
+
+input[for="input_total_pondere"] {
+  font-weight: bold;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.input-weighted {
+  background-color: white;
+  color: black;
+}
+
+.input-weighted-total {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+}
+
+.button-area {
+  background-color: rgb(156, 223, 206);
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 10px 10px;
+  margin: 0px 0px 0px 55px;
+  font-weight: bold;
+}
+
+.button-reset {
+  background-color: rgb(156, 223, 206);
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 10px 10px;
+  margin: 0px 0px 0px 55px;
+  font-weight: bold;
+  width: 500px;
+}
+
+#conteneur {
+  display: flex;
+}
+
+#col1 {
+  display: inline-block;
+  width: 25%;
+  margin: 20px;
+}
+
+#col2 {
+  display: inline-block;
+  width: 25%;
+  margin: 20px;
+}
+
+#col3 {
+  display: inline-block;
+  width: 50%;
+  margin: 20px;
+}
