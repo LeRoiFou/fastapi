@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TVA</title>
+    <link rel="stylesheet" href="/static/styleD004.css">
+</head>
+
+<body>
+
+    <h1>Calculatrice TVA</h1>
+
+    <form action="/" method="post">
+
+        <label for="amount">Entrer le montant :</label>
+        <input type="number" name="amount" id="amount" required="required"><br>
+
+        <label for="base">Sélectionner la base de calcul :</label>
+        <select name="base" id="base">
+            <option value="TTC">Montant TTC</option>
+            <option value="HT" selected="selected">Montant HT</option>
+            <option value="TVA">Montant TVA</option>
+        </select><br>
+
+        <label for="rate">Sélectionner le taux de TVA :</label>
+        <select name="rate" id="rate">
+            <option value="normal" selected="selected">Taux normal de 20.00 %</option>
+            <option value="intermediary">Taux intermédiaire de 10.00 %</option>
+            <option value="reduced">Taux réduit de 5.50 %</option>
+            <option value="super-reduced">Taux super réduit de 2.10 %</option>
+        </select><br>
+
+        <button type="submit">Valider</button>
+
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Eléments</th>
+                <th>Montant</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Base HT</td>
+                <td>{{line1}} €</td>
+            </tr>
+            <tr>
+                <td>TVA</td>
+                <td>{{line2}} €</td>
+            </tr>
+            <tr>
+                <td>Base TTC</td>
+                <td>{{line3}} €</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

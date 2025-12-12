@@ -1,32 +1,9 @@
-from fastapi import FastAPI, Request
-from fastapi.templating import Jinja2Templates
-from fastapi.staticfiles import StaticFiles
-import uvicorn
+from typing import Tuple
 
-app = FastAPI()
-templates = Jinja2Templates(directory='templates')
-app.mount(path='/static/', app=StaticFiles(directory='static'), name='static')
+def my_function(a:float, b:float) -> Tuple[float, float, float]:
+    return a + b, a - b, a * b
 
-@app.get(
-    path='/',
-    summary='',
-    description=""
-)
-def get_home(request: Request):
-    
-    my_dict = {'Nom': ['Gerald', 'White', 'Gallagher', 'Bohl',], 
-               'Prenom': ['John', 'Walter', 'Franck', 'Kevin',],
-               'Age': [48, 55, 60, 30],
-               }
-    
-    return templates.TemplateResponse(
-        'index_test.html',
-        {   
-            'request': request,
-            'message': 'Hello world!',
-            'dict': my_dict,
-        }
-    )
-
-if __name__ == '__main__':
-    uvicorn.run(app)
+res1, res2, res3 = my_function(5, 2)
+print(res1)
+print(res2)
+print(res3)
