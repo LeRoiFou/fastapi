@@ -1,13 +1,5 @@
 # Librairie fastapi
 
-<<<<<<< HEAD
-Date : 08/06/2025
-
-=======
-Date : 08/06/2025 <br>
->>>>>>> a9726430a6413567f6495d21e9caebe7e6516e61
----
-
 ## 1. Liste des fichiers / répertoires / ...
 
 ### indexA : tutos youtube
