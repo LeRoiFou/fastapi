@@ -1,7 +1,6 @@
 # Librairie fastapi
 
-Date : 08/06/2025 <br>
-Editeur : Laurent REYNAUD <br>
+Date : 08/06/2025
 
 ---
 
